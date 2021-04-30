@@ -1,1 +1,1 @@
-# vis
+# VIS-API (Village Information System)
