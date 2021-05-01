@@ -5,4 +5,5 @@
 cd vis-api  
 composer install  
 
-##
+## Creates Databse
+> php bin/console doctrine:database:create
