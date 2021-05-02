@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Desa index{% endblock %}
+
+{% block body %}
+    <h1>Desa index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nama_desa</th>
+                <th>Alamat_desa</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for desa in desas %}
+            <tr>
+                <td>{{ desa.id }}</td>
+                <td>{{ desa.namaDesa }}</td>
+                <td>{{ desa.alamatDesa }}</td>
+                <td>
+                    <a href="{{ path('desa_show', {'id': desa.id}) }}">show</a>
+                    <a href="{{ path('desa_edit', {'id': desa.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('desa_new') }}">Create new</a>
+{% endblock %}

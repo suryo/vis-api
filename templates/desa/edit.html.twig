@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Desa{% endblock %}
+
+{% block body %}
+    <h1>Edit Desa</h1>
+
+    {{ include('desa/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('desa_index') }}">back to list</a>
+
+    {{ include('desa/_delete_form.html.twig') }}
+{% endblock %}

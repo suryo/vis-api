@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Desa{% endblock %}
+
+{% block body %}
+    <h1>Desa</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ desa.id }}</td>
+            </tr>
+            <tr>
+                <th>Nama_desa</th>
+                <td>{{ desa.namaDesa }}</td>
+            </tr>
+            <tr>
+                <th>Alamat_desa</th>
+                <td>{{ desa.alamatDesa }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('desa_index') }}">back to list</a>
+
+    <a href="{{ path('desa_edit', {'id': desa.id}) }}">edit</a>
+
+    {{ include('desa/_delete_form.html.twig') }}
+{% endblock %}

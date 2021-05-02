@@ -19,10 +19,10 @@ class DesaRepository extends ServiceEntityRepository
         parent::__construct($registry, Desa::class);
     }
 
-    // /**
-    //  * @return Desa[] Returns an array of Desa objects
-    //  */
-    /*
+     /**
+      * @return Desa[] Returns an array of Desa objects
+      */
+    
     public function findByExampleField($value)
     {
         return $this->createQueryBuilder('d')
@@ -34,9 +34,9 @@ class DesaRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
-    */
+    
 
-    /*
+    
     public function findOneBySomeField($value): ?Desa
     {
         return $this->createQueryBuilder('d')
@@ -46,5 +46,5 @@ class DesaRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
-    */
+    
 }

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Desa{% endblock %}
+
+{% block body %}
+    <h1>Create new Desa</h1>
+
+    {{ include('desa/_form.html.twig') }}
+
+    <a href="{{ path('desa_index') }}">back to list</a>
+{% endblock %}
